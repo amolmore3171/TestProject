@@ -1,6 +1,5 @@
 apt-get -y update
 apt-get -y upgrade
-add-apt-repository ppa:marutter/rrutter
 apt -y update
 apt-get -y install r-base
 apt-get -y install apache2

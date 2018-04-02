@@ -1,7 +1,7 @@
 apt-get -y update
 apt-get -y upgrade
 add-apt-repository ppa:marutter/rrutter
-add-apt -y update
+apt-get -y update
 apt-get -y install r-base
 apt-get -y install apache2
 apt-get -y install gdebi-core

@@ -19,5 +19,8 @@ apt-get -y update
 apt-get -y install cifs-utils
 apt-get -y install nfs-common
 
-mkdir /mnt/dataikufs
-mount -t cifs //testdataikufs0001.file.core.windows.net/test /mnt/dataikufs -o vers=3.0,username=testdataikufs0001,password=idmzqB3NnKcdAZAgfGK9abSMJwiRumln7Yzc4dTR79p6AgxbuY/SPR9QVOm9miuu8Hx/vKumgUo9Ukfes+fvvw==,dir_mode=0777,file_mode=0777,sec=ntlmssp
+mkdir -p /mnt/dataikufs
+sudo mount -t cifs //tststorageacc02.file.core.windows.net/myshare /mnt/dataikufs -o vers=3.0,username=tststorageacc02,password=nDD+FdyoyiJ+e27Hbz01dBqNbELoalKr8beCr8S9p3AZ/c3cULCvldFgXSNDYzBi9oOwp2P96CijHxUfZLoKbQ==,dir_mode=0777,file_mode=0777,sec=ntlmssp
+
+docker login testdockerreg.azurecr.io --username testdockerreg --password =g5NGo162CJhlkk9tIaoBOlABy0KIkTu
+docker pull testdockerreg.azurecr.io/dataikuimage:latest

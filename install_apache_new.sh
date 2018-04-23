@@ -24,3 +24,6 @@ sudo mount -t cifs //tststorageacc02.file.core.windows.net/myshare /mnt/dataikuf
 
 docker login testdockerreg.azurecr.io --username testdockerreg --password =g5NGo162CJhlkk9tIaoBOlABy0KIkTu
 docker pull testdockerreg.azurecr.io/dataikuimage:latest
+
+./dataiku-dss-4.2.1/scripts/install/install-boot.sh /home/dataiku/dss_data
+./dss_data/bin/dss start

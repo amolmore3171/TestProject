@@ -14,7 +14,6 @@ apt-get -y install libpango*
 apt-get -y install libcairo*
 
 mkdir -p /opt/R/3.3.1
-
 cd /tmp
 wget https://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz
 tar -xvzf R-3.3.1.tar.gz
@@ -22,6 +21,17 @@ cd /tmp/R-3.3.1
 ./configure --prefix=/opt/R/3.3.1 --enable-R-shlib
 make
 make install
+rstudio-server stop
+rstudio-server start
 
+
+mkdir -p /opt/R/3.4.1
+cd /tmp
+wget https://cran.r-project.org/src/base/R-3/R-3.4.1.tar.gz
+tar -zxvf R-3.4.1.tar.gz
+cd /tmp/R-3.4.1
+./configure --prefix=/opt/R/3.4.1 --enable-R-shlib
+make
+make install
 rstudio-server stop
 rstudio-server start
